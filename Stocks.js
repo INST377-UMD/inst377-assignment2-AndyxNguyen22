@@ -1,3 +1,8 @@
+// fetch('https://api.polygon.io/v2/aggs/ticker/{stocksTicker}/range/{multiplier}/{timespan}/{from}/{to}?apiKey=b2UI4U0OhNy3rKyOPZUc0wnuwoDO10eK')
+
+
+
+
 fetch ('https://tradestie.com/api/v1/apps/reddit?date=2022-04-03')
     .then(response => response.json())
     .then(data => {
@@ -25,4 +30,4 @@ fetch ('https://tradestie.com/api/v1/apps/reddit?date=2022-04-03')
             table.appendChild(row);
         }); 
 
-    })
+    });

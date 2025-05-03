@@ -3,6 +3,8 @@
         <title>Assignment 2 Stocks Page</title>
         <link rel ="stylesheet" href = "Assignment2.css">
         <script src = "Stocks.js" defer></script>
+     
+        
 
     </head>
 
@@ -29,7 +31,18 @@
          <h1>Let's chart some stocks!</h1>
 
          <input type="text" id ="stocks" required>
-         <button onclick ="fetchStock()" > Lookup!
+         <br>
+
+         <label for = "date"></label>
+         <select name = "date" id ="date">
+            <option value= "30Days">30 Days</option>
+            <option value= "60Days">60 Days</option>
+            <option value= "90Days">90 Days</option>
+         </select>
+
+         <br>
+         <br>
+         <button onclick ="fetchStock()" id="lookup" > Lookup!
 
          </button>
 
@@ -87,9 +100,6 @@
             </div>
 
         </div>
-
-
-
 
 
 

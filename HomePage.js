@@ -10,8 +10,4 @@ fetch ('https://zenquotes.io/api/random')
         const author = data[0].a;
         console.log(`Author:" ${author}"`)
         document.getElementById('quote-text').innerText = `"${quote}" - ${author}`;
-    })
-    .catch (error => {
-        document.getElementById('quote-text').innerText = "Failed to Load";
-        console.error ("Error fetching quote", error);
     });
