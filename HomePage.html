@@ -3,6 +3,9 @@
         <title>Assignment 2 Home Page</title>
         <link rel ="stylesheet" href = "Assignment2.css">
         <script src = "HomePage.js" defer></script>
+        <script src= "//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src = "audio.js" ></script>
+
     </head>
 
     <body>
@@ -75,8 +78,8 @@
             </div>
             
             <div class="audio-buttons">
-                <button class="on button">Turn On Listening</button>
-                <button class="on button">Turn Off Listening</button>
+                <button class="on button" onclick = "annyang.start()">Turn On Listening</button>
+                <button class="off button" onclick = "annyang.abort()">Turn Off Listening</button>
 
             </div>
 

@@ -11,3 +11,4 @@ fetch ('https://zenquotes.io/api/random')
         console.log(`Author:" ${author}"`)
         document.getElementById('quote-text').innerText = `"${quote}" - ${author}`;
     });
+
