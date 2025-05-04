@@ -2,6 +2,7 @@
     <head>
         <title>Assignment 2 Stocks Page</title>
         <link rel ="stylesheet" href = "Assignment2.css">
+        <script src = "https://cdn.jsdelivr.net/npm/chart.js" defer ></script>
         <script src = "Stocks.js" defer></script>
      
         
@@ -30,7 +31,7 @@
         <!-- Stock Search Section -->
          <h1>Let's chart some stocks!</h1>
 
-         <input type="text" id ="stocks" required>
+         <input type= "text" id ="stocks" maxlength="5" required>
          <br>
 
          <label for = "date"></label>
@@ -42,9 +43,12 @@
 
          <br>
          <br>
-         <button onclick ="fetchStock()" id="lookup" > Lookup!
+         <button onclick = "fetchStock()" id="lookup" class="lookup" > Lookup!</button>
 
-         </button>
+         <div id = "chartDiv">
+            <canvas id = "myChart"></canvas>
+
+         </div>
 
 
 
@@ -100,10 +104,6 @@
             </div>
 
         </div>
-
-
-
-
 
     </body>
 
