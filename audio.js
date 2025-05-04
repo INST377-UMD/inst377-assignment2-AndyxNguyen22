@@ -1,8 +1,8 @@
 if (annyang) {
     const commands = {
       'Hello': () => { alert('Hello world!'); },
-      'Change the color to <color>': colorChange,
-      'Navigate to <page>': pageNavigate
+      'Change the color to *color': colorChange,
+      'Navigate to *page': pageNavigate
     };
     
     function colorChange(color){
@@ -11,8 +11,8 @@ if (annyang) {
     }
 
     function pageNavigate(url){
+        url += ".html"
         window.location.href = url
-
     }
   
     // Add our commands to annyang
