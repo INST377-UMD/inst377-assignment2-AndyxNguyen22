@@ -97,9 +97,8 @@ fetch ('https://tradestie.com/api/v1/apps/reddit?date=2022-04-03')
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td><a href = "https://finance.yahoo.com/quote/${topstocks.ticker}" target = "_blank"> 
-                ${topstocks.ticker}
-                                                </a></td>
+                <td><a href = "https://finance.yahoo.com/quote/${topstocks.ticker}" > 
+                ${topstocks.ticker}</a></td>
 
                 <td>${topstocks.no_of_comments}</td>
 

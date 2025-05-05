@@ -28,14 +28,20 @@ async function dogImages() {
 }
 dogImages();
 
+
 // Dog Descriptions
+
+const dogData = {
+    breeds: []
+};
+
 async function dogDescriptions(){
     try{
         const response = await fetch("https://dogapi.dog/api/v2/breeds");
         const data = await response.json();
         console.log("Result",data);
 
-        const breeds = data.data;
+        dogData.breeds = data.data;
 
         const dogButtons = document.getElementById("dogButtons");
         const dogDescriptions = document.getElementById("dogDescription");
@@ -46,8 +52,8 @@ async function dogDescriptions(){
         const random = [];
 
         while (random.length < 10) {
-            const randomDogs = Math.floor(Math.random() * breeds.length);
-            const dogBreed = breeds[randomDogs];
+            const randomDogs = Math.floor(Math.random() * dogData.breeds.length);
+            const dogBreed = dogData.breeds[randomDogs];
 
             const noRepeat = random.some(dog => dog.id === dogBreed.id);
             if (!noRepeat) {
@@ -78,8 +84,8 @@ async function dogDescriptions(){
                 </p>
                 `;
                 dogDescriptions.style.display = "block";
-
             });
+
             dogButtons.appendChild(button);
         });
 
@@ -89,4 +95,4 @@ async function dogDescriptions(){
 
 }
 
-window.onload = (dogDescriptions);
+window.onload = dogDescriptions();
